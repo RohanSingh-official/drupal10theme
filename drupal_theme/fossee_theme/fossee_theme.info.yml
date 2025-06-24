@@ -1,0 +1,34 @@
+name: FOSSEE Theme
+type: theme
+description: 'Custom Drupal 10 theme for FOSSEE website with responsive design and configurable settings'
+package: Custom
+core_version_requirement: ^10
+base theme: false
+
+libraries:
+  - fossee_theme/global-styling
+  - fossee_theme/global-scripts
+  - fossee_theme/bootstrap
+  - fossee_theme/fontawesome
+
+regions:
+  top_banner: 'Top Banner'
+  header: 'Header'
+  navigation: 'Navigation'
+  hero_section: 'Hero Section'
+  content: 'Content'
+  news_notice: 'News and Notice'
+  activity_section: 'Activity Section'
+  features_section: 'Features Section'
+  footer: 'Footer'
+
+libraries-extend:
+  core/drupal:
+    - fossee_theme/global-styling
+
+# Configuration settings
+settings:
+  logo:
+    use_default: true
+  favicon:
+    use_default: true

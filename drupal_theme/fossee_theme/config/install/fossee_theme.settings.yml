@@ -1,0 +1,10 @@
+### 8. config/install/fossee_theme.settings.yml
+```yaml
+primary_color: '#ff6b35'
+hero_slider_images: []
+footer_text: 'FOSSEE, IIT Bombay'
+show_social_links: true
+logo:
+  use_default: true
+favicon:
+  use_default: true
