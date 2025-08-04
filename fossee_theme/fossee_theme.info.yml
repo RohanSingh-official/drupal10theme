@@ -1,0 +1,20 @@
+name: FOSSEE Theme
+type: theme
+description: 'FOSSEE Official Website Theme'
+package: Custom
+core_version_requirement: ^10
+base theme: false
+
+libraries:
+  - fossee_theme/global-styling
+
+regions:  
+  top_advt: 'Top Advertisement'
+  header: 'Header'
+  navigation: 'Navigation'
+  hero: 'Hero Section'
+  content: 'Content'
+  news_notice: 'News and Notice'
+  activities: 'Activities'
+  features: 'Features'
+  footer: 'Footer'

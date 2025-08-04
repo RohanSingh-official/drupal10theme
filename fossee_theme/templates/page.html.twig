@@ -1,0 +1,176 @@
+{#
+/**
+ * @file
+ * FOSSEE theme page template - Enhanced Official Version
+ * Template sections match the design requirements with numbered regions
+ */
+#}
+
+{# Section 1: Top Advertisement Section #}
+<div class="top-advt section-1">
+  <div class="container">
+    <div class="advt-content">
+      {{ page.top_advt|default('<p class="top-advt-placeholder">ADVT / Announcement Area</p>')|raw }}
+    </div>
+  </div>
+</div>
+
+{# Section 2: Header with Navigation Section #}
+<header class="fossee-header section-2">
+  <div class="container">
+    <div class="header-brand">
+      <div class="fossee-logo">
+        <img src="{{ base_path ~ directory }}/images/fossee-logo.png" alt="FOSSEE Logo" class="logo-image">
+      </div>
+      <div class="fossee-text">
+        <h1 class="fossee-title">
+          <a href="{{ path('<front>') }}">{{ site_name|default('fossee') }}</a>
+        </h1>
+        <div class="fossee-slogan">{{ site_slogan|default('Free/Libre and Open Source Software for Education') }}</div>
+      </div>
+    </div>
+  </div>
+  
+  {# Navigation Bar - Part of Header Section #}
+  <nav class="main-navigation">
+    <div class="container">
+      {{ page.navigation|default('<ul class="nav-menu">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Resources</a></li>
+        <li><a href="#">Statistics</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Newsletter</a></li>
+        <li><a href="#">Fellowship</a></li>
+        <li><a href="#">Events</a></li>
+      </ul>')|raw }}
+    </div>
+  </nav>
+</header>
+
+{# Section 3: Hero Section with Dr. Kalam #}
+<section class="hero-section section-3">
+  <div class="container hero-content">
+    <div class="hero-image">
+      <img src="{{ base_path ~ directory }}/images/kalam.svg" alt="Dr. A. P. J. Abdul Kalam">
+    </div>
+    <div class="hero-text">
+      <blockquote class="hero-quote">
+        "The most unfortunate thing is that India still seems to believe in proprietary solutions... In India, open source code software will have to come and stay in a big way for the benefit of our billion people."
+      </blockquote>
+      <cite class="hero-author">Dr. A. P. J. Abdul Kalam</cite>
+    </div>
+  </div>
+</section>
+
+{# Section 4: News and Notice Section #}
+<section class="news-notice-section section-4">
+  <div class="container news-notice-grid">
+    <div class="current-news">
+      <h3>Current News</h3>
+      <div class="news-content">
+        <div class="news-image">
+          <img src="{{ base_path ~ directory }}/images/conference-poster.jpg" alt="Conference Poster" class="news-poster">
+        </div>
+        <div class="news-text">
+          <div class="news-item">
+            <div class="news-title">International Conference on Open source for Chemical Process Simulation 2019</div>
+            <div class="news-date">29 & 30 November, 2019</div>
+            <div class="news-description">In collaboration with IIT Bombay on 29 & 30 November, 2019.</div>
+          </div>
+          <a href="#" class="news-more">[More]</a>
+        </div>
+      </div>
+    </div>
+    <div class="forum-notice">
+      <h3>Forum Notice</h3>
+      <div class="forum-content">
+        <p>For assistance in installation and use of Free/Libre and Open Source Software, we recommend visiting the FOSSEE Forum. It is monitored by domain experts.</p>
+        <a href="#" class="forum-link">Read More...</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+{# Main Content #}
+<main class="main-content">
+  <div class="container">
+    {{ page.content }}
+  </div>
+</main>
+
+{# Section 5: Activities Section #}
+<section class="activities-section section-5">
+  <div class="container">
+    <div class="activities-content">
+      <div class="activities-left">
+        <div class="activity-cards">
+          <div class="activity-card activity-case-study">Case Study</div>
+          <div class="activity-card activity-lab-migration">Lab Migration</div>
+          <div class="activity-card activity-niche">Niche Software Activities</div>
+          <div class="activity-card activity-textbook">Textbook Companion</div>
+          <div class="activity-card activity-workshop">Workshop & Conferences</div>
+        </div>
+      </div>
+      <div class="activities-right">
+        <div class="activities-info">
+          <h3>Activities</h3>
+          <div class="activity-description">
+            <h4>CASE STUDY</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc dignissim porta lorem vitae. Nullam euismod maximus ante et in accumsan magna maximus ex. Nunc dignissam dolor non mauris mollis, condimentum consectetur adipiscing elit. Nunc dignissam dolor sit amet, consectetur adipiscing elit. Nullam euismod maximus ante et in accumsan magna maximus ex. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod maximus ante et in bibendum tellus bibendum ex. Nunc dignissam dolor non mauris mollis.</p>
+            <a href="#" class="activity-more">>></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{# Features Section #}
+<section class="features-section">
+  <div class="container features-grid">
+    <div class="poster-section">
+      <h3>FOSSEE Poster</h3>
+      <img src="{{ base_path ~ directory }}/images/poster1.jpg" alt="FOSSEE Poster" class="poster-image">
+    </div>
+    <div class="poster-section">
+      <h3>FOSSEE Poster</h3>
+      <img src="{{ base_path ~ directory }}/images/poster2.jpg" alt="FOSSEE Poster" class="poster-image">
+    </div>
+    <div class="social-media">
+      <h3>FOSSEE Social Media</h3>
+      <div class="social-icons">
+        <a href="#" class="social-icon facebook">F</a>
+        <a href="#" class="social-icon youtube">Y</a>
+        <a href="#" class="social-icon linkedin">L</a>
+        <a href="#" class="social-icon instagram">I</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+{# Footer #}
+<footer class="fossee-footer">
+  <div class="container footer-content">
+    <div class="footer-section">
+      <h4>Contact Detail:</h4>
+      <p>FOSSEE, IIT Bombay<br>
+      Mumbai, India</p>
+      <p>Phone: (+91) 22 25764133<br>Email: info [at] fossee [dot] in</p>
+    </div>
+    <div class="footer-section">
+      <h4>Ministry of Education</h4>
+      <p>Govt. of India</p>
+    </div>
+    <div class="footer-section">
+      <h4>Footer Links</h4>
+      <a href="#">Link 1</a><br>
+      <a href="#">Link 2</a><br>
+      <a href="#">Link 3</a><br>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <p>&copy; {{ "now"|date("Y") }} FOSSEE, IIT Bombay. The work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.</p>
+  </div>
+</footer>
